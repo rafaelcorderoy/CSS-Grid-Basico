@@ -4,10 +4,6 @@
     display: grid;
     grid-template-columns: 150px 150px 150px;
     grid-template-rows: 75px 75px 75px;
-    grid-template-areas: 
-            "header header header"
-            "menu main main"
-            "menu main main";
     place-content: center;
 }
 .item {
@@ -15,18 +11,18 @@
     border: 2px solid blue;
 }
 .item-1 {
-    grid-area: header;
+    grid-column-start: 1;
+    grid-column-end: 4;
     border: 5px solid green;
     background-color: yellow;
 }
 .item-2 {
-    grid-area: main;
     border: 5px solid blue;
     background-color: lightblue;
-
+    grid-row: 2 / 4;
 }
 .item-3 {
-    grid-area: menu;
+    grid-area: 2 / 2 / 4 /4;
     border: 5px solid red;
     background-color: rosybrown;
 }
